@@ -15,7 +15,9 @@
     "express": "^4.14.0",
     "express-validator": "^2.20.8"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "keywords": [
     "node",
     "rpg",
