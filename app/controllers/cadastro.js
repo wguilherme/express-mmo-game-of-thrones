@@ -1,5 +1,5 @@
 module.exports.cadastro = (application, req, res) => {
-    res.render('cadastro');
+    res.render('cadastro', {validacao: {}});
 }
 
 module.exports.cadastrar = (application, req, res) => {
@@ -10,20 +10,13 @@ module.exports.cadastrar = (application, req, res) => {
     req.assert('nome', 'Nome não pode ser vazio').notEmpty();
     req.assert('usuario', 'Usuário pode ser vazio').notEmpty();
     req.assert('senha', 'Senha pode ser vazio').notEmpty();
-    req.assert('casa', 'Casa pode ser vazio').notEmpty();
+    req.assert('casa', 'Casa não pode ser vazio').notEmpty();
 
     //recuperar erros
     const erros = req.validationErrors();
-
-    
-
     if(erros){
-        res.send('existem erros no formulário');
+        res.render('cadastro', {validacao: erros});
         return;
     }
-
-    res.send('podemos cadastrar')
-
-
 
 }
