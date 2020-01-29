@@ -19,4 +19,15 @@ module.exports.cadastrar = (application, req, res) => {
         return;
     }
 
+    //conexão banco
+    var connection = application.config.dbConnection;
+    console.log(connection);
+    
+    var UsuariosDAO = new application.app.models.UsuariosDAO(connection);
+
+    UsuariosDAO.inserirUsuario(dadosForm);
+
+    res.send('podemos cadastrar');
+
+
 }
