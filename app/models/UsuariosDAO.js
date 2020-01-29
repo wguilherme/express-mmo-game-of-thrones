@@ -20,16 +20,16 @@ UsuariosDAO.prototype.autenticar = function (usuario, req, res) {
 
     this._connection.open( (err, mongoclient) =>  {
         mongoclient.collection("usuarios",(err, collection) => {
-
+            
             //busca usuário igual enviado
             //find retornar um cursor, precisamos converter 
             collection.find(usuario).toArray(function(err, result){
                
                 //retonar objeto do usuário
                 if (result[0] != undefined){
+                    //cria variável de sessão
                     req.session.autorizado = true;
                 }
-
                 if (req.session.autorizado){
                     res.send('usuário foi encontrado no banco de dados')
                 } else {
