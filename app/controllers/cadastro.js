@@ -13,7 +13,7 @@ module.exports.cadastrar = (application, req, res) => {
     req.assert('casa', 'Casa não pode ser vazio').notEmpty();
 
     //recuperar erros
-    const erros = req.validationErrors();
+    var erros = req.validationErrors();
     if(erros){
         res.render('cadastro', {validacao: erros, dadosForm: dadosForm});
         return;
