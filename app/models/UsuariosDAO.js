@@ -29,11 +29,16 @@ UsuariosDAO.prototype.autenticar = function (usuario, req, res) {
                 if (result[0] != undefined){
                     //cria variável de sessão
                     req.session.autorizado = true;
+
+                    //cria outras variáveis de sessão
+                    //diminui qtd de requisições no db
+                    req.session.usuario = result[0].usuario;
+                    req.session.casa = result[0].casa;
                 }
                 if (req.session.autorizado){
-                    res.send('usuário foi encontrado no banco de dados')
+                    res.redirect('jogo')
                 } else {
-                    res.send('usuário não existe no banco de dados')
+                    res.render('index',{ validacao: {}})
                 }
 
 
