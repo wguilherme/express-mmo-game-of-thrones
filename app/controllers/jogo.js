@@ -61,6 +61,13 @@ module.exports.ordenar_acao_sudito = function(application, req, res){
         return;
     }
 
-    console.log(dadosForm);
+    //gravar os dados
+    //conexão com mongodb
+    var connection = application.config.dbConnection;
+    var JogoDAO = new application.app.models.JogoDAO(connection);
+
+    JogoDAO.acao(dadosForm);
+
     res.send('tudo ok');
+
 }

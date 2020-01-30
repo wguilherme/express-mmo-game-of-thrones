@@ -32,6 +32,10 @@ JogoDAO.prototype.iniciaJogo = function(res, usuario, casa, comando_invalido){
     
 }
 
+JogoDAO.prototype.acao = function (acao){
+    console.log(acao);
+}
+
 module.exports = function(){
     return JogoDAO;
 }
