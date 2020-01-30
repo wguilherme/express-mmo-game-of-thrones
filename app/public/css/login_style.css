@@ -1,0 +1,74 @@
+/* Fundo da Página */
+body {
+background: url("https://images5.alphacoders.com/403/thumb-1920-403408.jpg");
+ background-position: 0% 0%;
+ background-size: cover;
+ background-repeat: no-repeat;
+ height: 100vh;
+ }
+ 
+ .b {
+   font-weight: bold;
+   margin-bottom: 2rem;
+   color: #9C6613;
+ }
+ 
+ .btn {
+   background-color: #9C6613;
+   color: white;
+ }
+ 
+ 
+ .center {
+   text-align: center;
+ }
+
+
+
+ .card {
+   background-color: #d4c4ac;
+ }
+ 
+ .card-signin {
+   border: 0;
+   border-radius: 0rem;
+   box-shadow: 0 0.5rem 1rem 0 rgba(10, 0, 0, 0.5);
+ }
+ 
+ .card-signin .card-title {
+   margin-bottom: 2rem;
+   font-weight: 300;
+   font-size: 1.5rem;
+ }
+ 
+ .card-signin .card-body {
+   padding: 2rem;
+ }
+ 
+ .form-signin {
+   width: 100%;
+ }
+ 
+ .form-signin .btn {
+   font-size: 80%;
+   border-radius: 0rem;
+   letter-spacing: .1rem;
+   font-weight: bold;
+   padding: 1rem;
+   transition: all 0.2s;
+ }
+ 
+ .form-label-group {
+   position: relative;
+   margin-bottom: 1rem;
+ }
+ 
+ .form-label-group input {
+ 
+   border-radius: 0rem;
+ }
+ .form-label-group input::placeholder {
+   color: gray;
+ }
+ 
+ 
